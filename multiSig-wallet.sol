@@ -44,7 +44,7 @@ contract MultiSigWallet {
     }
 
     constructor (address[] _owners, uint _requiredVotesPerTx) {
-        require(_requiredVotesPerTx > 0 && _requiredVotesPerTx <= _owners.length, "Invalid number of required votes");z
+        require(_requiredVotesPerTx > 0 && _requiredVotesPerTx <= _owners.length, "Invalid number of required votes");
         owners.push(msg.sender);
         isOwner[msg.sender] = true;
         for (uint i; i<_owners.length; i++) {
